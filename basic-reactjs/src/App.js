@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import Clothes from './Clothes'; // import component
+/* function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Clothes name="Zara" type="skinny"color="black" size="L">
+      Clothes 1
+      </Clothes>
+      <Clothes name="Jean" type="skinny" color="black"size="L">
+      Clothes 1
+      </Clothes>
     </div>
   );
+} */
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    //chi dinh 1 state
+    this.state = {index: 1};
+  }
+  render() {
+    return (
+      <div>
+        <p>
+          value: {this.state.index}
+        </p>
+        <button onClick={() => this.setState({
+          index: this.state.index + 1
+        })}> UP </button>
+        <button onClick={() => this.setState({
+          index: this.state.index - 1
+        })}> Down </button>
+      </div>
+    )
+  }
 }
-
 export default App;
