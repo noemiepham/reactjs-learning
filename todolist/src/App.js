@@ -25,6 +25,11 @@ function App(props) {
           <span>all</span>
           <span className="visually-hidden"> tasks</span>
         </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="true">
+          <span className="visually-hidden">Show </span>
+          <span>all</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
         <button type="button" className="btn toggle-btn" aria-pressed="false">
           <span className="visually-hidden">Show </span>
           <span>Active</span>
@@ -37,9 +42,7 @@ function App(props) {
         </button>
       </div>
       <h2 id="list-heading">3 tasks remaining</h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
+      <ul className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
         <li className="todo stack-small">
           <div className="c-cb">
@@ -93,3 +96,5 @@ function App(props) {
     </div>
   );
 }
+
+export default App;
